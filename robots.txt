@@ -1,0 +1,3 @@
+User-agent: *
+Allow:/
+Sitemap: https://marvelheroface.netlify.app/sitemap.xml
