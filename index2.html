@@ -75,11 +75,16 @@
                             class="nav-item active"
                             onclick="gtag('event', '마블히어로사이트', {'event_category': '마블히어로사이트 클릭','event_label': '상단 메뉴'});"
                         >
-                            <a
-                                class="nav-link"
-                                id="nblog-top-link"
-                                href="../index.html"
+                            <a class="nav-link" id="nblog-top-link" href="../index"
                                 >마블히어로닮은꼴</a
+                            >
+                        </li>
+                        <li
+                            class="nav-item active"
+                            onclick="gtag('event', '디즈니프린세스찾기', {'event_category': '디즈니프린세스찾기 클릭','event_label': '상단 메뉴'});"
+                        >
+                            <a class="nav-link" id="nblog-top-link" href="../index2"
+                                >디즈니프린세스찾기</a
                             >
                         </li>
                         <!-- <a class="nav-link active" aria-current="page" href="#">Home</a>
@@ -169,21 +174,21 @@
             ></script>
         </div>
         <p>당신은</p>
-            <h1 id="v_count">0</h1>
+        <h1 id="v_count">0</h1>
         <p>번째 프린세스입니다</p>
         <div id="disqus_thread"></div>
         <script>
-        const countEl = document.getElementById('v_count');
+            const countEl = document.getElementById('v_count');
 
-updateVisitCount();
+            updateVisitCount();
 
-function updateVisitCount() {
-  fetch('https://api.countapi.xyz/update/marvelheroface.netlify.app/index2?amount=1')
-  .then(res => res.json())
-  .then(res => {
-    countEl.innerHTML = res.value;
-  });
-}
+            function updateVisitCount() {
+                fetch('https://api.countapi.xyz/update/marvelheroface.netlify.app/index2?amount=1')
+                    .then((res) => res.json())
+                    .then((res) => {
+                        countEl.innerHTML = res.value;
+                    });
+            }
         </script>
         <script>
             /**
