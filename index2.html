@@ -21,8 +21,11 @@
             src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-61bffb46024d3c88"
         ></script>
         <meta name="naver-site-verification" content="de463d16ec76fda3d27f944b981af5fd8cf6f3e7" />
-        <meta name="description" content="Teachable Machine을 이용해 만든 마블 히어로 닮은꼴 찾기 사이트입니다" />
-        <link rel="canonical" href="https://marvelheroface.netlify.app/">
+        <meta
+            name="description"
+            content="Teachable Machine을 이용해 만든 마블 히어로 닮은꼴 찾기 사이트입니다"
+        />
+        <link rel="canonical" href="https://marvelheroface.netlify.app/" />
         <meta property="og:title" content="마블히어로" />
         <meta property="og:description" content="마블히어로닮은꼴" />
     </head>
@@ -46,11 +49,27 @@
                         <li class="nav-item active">
                             <a class="nav-link active" aria-current="page" href="#">Home</a>
                         </li>
-                        <li class="nav-item active" onclick="gtag('event', '티스토리', {'event_category': '티스토리 클릭','event_label': '상단 메뉴'});">
-                            <a class="nav-link" id="tblog-top-link" href="https://jerry-style.tistory.com/">티스토리</a>
+                        <li
+                            class="nav-item active"
+                            onclick="gtag('event', '티스토리', {'event_category': '티스토리 클릭','event_label': '상단 메뉴'});"
+                        >
+                            <a
+                                class="nav-link"
+                                id="tblog-top-link"
+                                href="https://jerry-style.tistory.com/"
+                                >티스토리</a
+                            >
                         </li>
-                        <li class="nav-item active" onclick="gtag('event', '네이버블로그', {'event_category': '네이버블로그 클릭','event_label': '상단 메뉴'});">
-                            <a class="nav-link" id="nblog-top-link" href="https://blog.naver.com/jhonbeetbox">네이버블로그</a>
+                        <li
+                            class="nav-item active"
+                            onclick="gtag('event', '네이버블로그', {'event_category': '네이버블로그 클릭','event_label': '상단 메뉴'});"
+                        >
+                            <a
+                                class="nav-link"
+                                id="nblog-top-link"
+                                href="https://blog.naver.com/jhonbeetbox"
+                                >네이버블로그</a
+                            >
                         </li>
                         <!-- <a class="nav-link active" aria-current="page" href="#">Home</a>
                         <a class="nav-link" href="#">유투브 퇴근한개발자</a>
@@ -67,17 +86,25 @@
         <section class="blog">
             <div class="container mt-5 blog-cover d-flex flex-row-reverse">
                 <img src="img/youtube-copy.jpg" alt="" class="naverblog-icon" />
-                <a href="https://blog.naver.com/jhonbeetbox" class="blog-link">Developed By 장제리</a>
+                <a href="https://blog.naver.com/jhonbeetbox" class="blog-link"
+                    >Developed By 장제리</a
+                >
             </div>
 
-        <div class="mt-2 container d-flex justify-content-center ad-banner">
-            <ins class="kakao_ad_area" style="display:none;" 
-                 data-ad-unit    = "DAN-Lh18X9Z22V6CCS5G" 
-                 data-ad-width   = "320" 
-                 data-ad-height  = "100"></ins> 
-            <script type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async></script>
-        </div>
-            
+            <div class="mt-2 container d-flex justify-content-center ad-banner">
+                <ins
+                    class="kakao_ad_area"
+                    style="display: none;"
+                    data-ad-unit="DAN-Lh18X9Z22V6CCS5G"
+                    data-ad-width="320"
+                    data-ad-height="100"
+                ></ins>
+                <script
+                    type="text/javascript"
+                    src="//t1.daumcdn.net/kas/static/ba.min.js"
+                    async
+                ></script>
+            </div>
         </section>
         <script
             class="jsbin"
@@ -117,14 +144,36 @@
         </div>
         <div id="webcam-container"></div>
         <div class="mt-2 container d-flex justify-content-center ad-banner">
-            <ins class="kakao_ad_area" style="display:none;" 
-                 data-ad-unit    = "DAN-EwIVUwMV2FJfcM5f" 
-                 data-ad-width   = "728" 
-                 data-ad-height  = "90"></ins> 
-            <script type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async></script>
+            <ins
+                class="kakao_ad_area"
+                style="display: none;"
+                data-ad-unit="DAN-EwIVUwMV2FJfcM5f"
+                data-ad-width="728"
+                data-ad-height="90"
+            ></ins>
+            <script
+                type="text/javascript"
+                src="//t1.daumcdn.net/kas/static/ba.min.js"
+                async
+            ></script>
         </div>
+        <p>당신은</p>
+            <h1 id="v_count">0</h1>
+        <p>번째 프린세스입니다</p>
         <div id="disqus_thread"></div>
-        
+        <script>
+        const countEl = document.getElementById('v_count');
+
+updateVisitCount();
+
+function updateVisitCount() {
+  fetch('https://api.countapi.xyz/update/marvelheroface.netlify.app/index2?amount=1')
+  .then(res => res.json())
+  .then(res => {
+    countEl.innerHTML = res.value;
+  });
+}
+        </script>
         <script>
             /**
              *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
@@ -209,7 +258,6 @@
 
             // the link to your model provided by Teachable Machine export panel
             const URL = 'https://teachablemachine.withgoogle.com/models/jnAj1ZdUC/';
-            
 
             let model, webcam, labelContainer, maxPredictions;
 
@@ -277,5 +325,14 @@ Permission is hereby granted, free of charge, to any person obtaining a copy of 
 The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+ -->
+    <!-- Copyright (c) 2021 by perryfeinstein (https://codepen.io/perryfeinstein/pen/YzPJQjp)
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
  -->
 </html>
