@@ -143,7 +143,7 @@
                 <img class="file-upload-image" id="face-image" src="#" alt="your image" />
                 <div id="loading" class="animated bounce">
                     <div class="spinner-border" role="status"></div>
-                    <p class="text-loading">요술거울이 생각중입니다</p>
+                    <p class="text-loading-2">요술거울이 생각중입니다</p>
                 </div>
                 <p class="result-message"></p>
                 <div id="label-container" class="d-flex flex-column justify-content-around"></div>
@@ -296,7 +296,7 @@ function cb(response) {
                 const prediction = await model.predict(image, false);
                 prediction.sort((a, b) => parseFloat(b.probability) - parseFloat(a.probability));
                 var resultMessage = prediction[0].className;
-                var res_title = "<div class='result-title'>" + resultMessage + '</div>';
+                var res_title = "<div class='result-title-2'>" + resultMessage + '</div>';
                 $('.result-message').html(res_title);
 
                 var printcnt = maxPredictions > 5 ? 5 : maxPredictions;

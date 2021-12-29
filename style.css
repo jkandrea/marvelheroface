@@ -200,9 +200,20 @@ body {
     border: solid 1.5px #f6f7fa;
 }
 
+.result-title-2 {
+    font-size: 2rem;
+    color: #F0A0C0;
+    border: solid 1.5px #f6f7fa;
+}
+
 .text-loading {
     font-size: 0.5rem;
     color: #C01010;
+}
+
+.text-loading-2 {
+    font-size: 0.5rem;
+    color: #F0A0C0;
 }
 
 .bar-container {
