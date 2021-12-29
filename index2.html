@@ -178,18 +178,11 @@
         <p>번째 프린세스입니다</p>
         <div id="disqus_thread"></div>
         <script>
-            const countEl = document.getElementById('v_count');
-
-            updateVisitCount();
-
-            function updateVisitCount() {
-                fetch('https://api.countapi.xyz/update/marvelheroface.netlify.app?amount=1')
-                    .then((res) => res.json())
-                    .then((res) => {
-                        countEl.innerHTML = res.value;
-                    });
-            }
-        </script>
+function cb(response) {
+    document.getElementById('v_count').innerText = response.value;
+}
+</script>
+<script async src="https://api.countapi.xyz/hit/marvelheroface.netlify.appindex2/visits?callback=cb"></script>
         <script>
             /**
              *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
