@@ -296,7 +296,7 @@ function cb(response) {
                 const prediction = await model.predict(image, false);
                 prediction.sort((a, b) => parseFloat(b.probability) - parseFloat(a.probability));
                 var resultMessage = prediction[0].className;
-                var res_title = "<div class='result-title-2'>" + resultMessage + '</div>';
+                var res_title = "<div class='result-title-2'>" + "당신은" + resultMessage + "공주님이군요" + '</div>';
                 $('.result-message').html(res_title);
 
                 var printcnt = maxPredictions > 5 ? 5 : maxPredictions;
