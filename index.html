@@ -71,21 +71,27 @@
                                 >네이버블로그</a
                             >
                         </li>
-                        <li
-                            class="nav-item active"
-                            onclick="gtag('event', '마블히어로사이트', {'event_category': '마블히어로사이트 클릭','event_label': '상단 메뉴'});"
-                        >
-                            <a class="nav-link" id="nblog-top-link" href="../index"
-                                >마블히어로닮은꼴</a
+
+                        <li class="nav-item dropdown">
+                            <a
+                                class="nav-link dropdown-toggle"
+                                href="#"
+                                id="navbarDropdown"
+                                role="button"
+                                data-bs-toggle="dropdown"
+                                aria-expanded="false"
                             >
-                        </li>
-                        <li
+                                닮은꼴 찾기
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li class="nav-item active"
+                            onclick="gtag('event', '마블히어로사이트', {'event_category': '마블히어로사이트 클릭','event_label': '상단 메뉴'});"><a class="dropdown-item" href="../index">마블히어로닮은꼴</a></li>
+                                <li
                             class="nav-item active"
-                            onclick="gtag('event', '디즈니프린세스찾기', {'event_category': '디즈니프린세스찾기 클릭','event_label': '상단 메뉴'});"
-                        >
-                            <a class="nav-link" id="nblog-top-link" href="../index2"
-                                >디즈니프린세스찾기</a
-                            >
+                            onclick="gtag('event', '디즈니프린세스찾기', {'event_category': '디즈니프린세스찾기 클릭','event_label': '상단 메뉴'});"><a class="dropdown-item" href="../index2">디즈니프린세스찾기</a></li>
+                                <!-- <li><hr class="dropdown-divider" /></li>
+                                <li><a class="dropdown-item" href="#">Something else here</a></li> -->
+                            </ul>
                         </li>
                         <!-- <a class="nav-link active" aria-current="page" href="#">Home</a>
                         <a class="nav-link" href="#">유투브 퇴근한개발자</a>
