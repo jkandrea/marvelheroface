@@ -71,7 +71,29 @@
                                 >네이버블로그</a
                             >
                         </li>
-                        <li
+
+                        <li class="nav-item dropdown">
+                            <a
+                                class="nav-link dropdown-toggle"
+                                href="#"
+                                id="navbarDropdown"
+                                role="button"
+                                data-bs-toggle="dropdown"
+                                aria-expanded="false"
+                            >
+                                닮은꼴 찾기
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li class="nav-item active"
+                            onclick="gtag('event', '마블히어로사이트', {'event_category': '마블히어로사이트 클릭','event_label': '상단 메뉴'});"><a class="dropdown-item" href="../index">마블히어로닮은꼴</a></li>
+                                <li
+                            class="nav-item active"
+                            onclick="gtag('event', '디즈니프린세스찾기', {'event_category': '디즈니프린세스찾기 클릭','event_label': '상단 메뉴'});"><a class="dropdown-item" href="../index2">디즈니프린세스찾기</a></li>
+                                <!-- <li><hr class="dropdown-divider" /></li>
+                                <li><a class="dropdown-item" href="#">Something else here</a></li> -->
+                            </ul>
+                        </li>
+                        <!-- <li
                             class="nav-item active"
                             onclick="gtag('event', '마블히어로사이트', {'event_category': '마블히어로사이트 클릭','event_label': '상단 메뉴'});"
                         >
@@ -86,7 +108,7 @@
                             <a class="nav-link" id="nblog-top-link" href="../index2"
                                 >디즈니프린세스찾기</a
                             >
-                        </li>
+                        </li> -->
                         <!-- <a class="nav-link active" aria-current="page" href="#">Home</a>
                         <a class="nav-link" href="#">유투브 퇴근한개발자</a>
                         <a class="nav-link" href="#">Pricing</a>
@@ -178,11 +200,14 @@
         <p>번째 프린세스입니다</p>
         <div id="disqus_thread"></div>
         <script>
-function cb(response) {
-    document.getElementById('v_count').innerText = response.value;
-}
-</script>
-<script async src="https://api.countapi.xyz/hit/marvelheroface.netlify.appindex2/visits?callback=cb"></script>
+            function cb(response) {
+                document.getElementById('v_count').innerText = response.value;
+            }
+        </script>
+        <script
+            async
+            src="https://api.countapi.xyz/hit/marvelheroface.netlify.appindex2/visits?callback=cb"
+        ></script>
         <script>
             /**
              *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
@@ -296,7 +321,12 @@ function cb(response) {
                 const prediction = await model.predict(image, false);
                 prediction.sort((a, b) => parseFloat(b.probability) - parseFloat(a.probability));
                 var resultMessage = prediction[0].className;
-                var res_title = "<div class='result-title-2'>" + "당신은 " + resultMessage + " 공주님이군요" + '</div>';
+                var res_title =
+                    "<div class='result-title-2'>" +
+                    '당신은 ' +
+                    resultMessage +
+                    ' 공주님이군요' +
+                    '</div>';
                 $('.result-message').html(res_title);
 
                 var printcnt = maxPredictions > 5 ? 5 : maxPredictions;
